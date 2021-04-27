@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>MVC Project</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- CSS links -->
+<link rel="stylesheet" href="/resources/css/index.css">
+<body>
+	<div id=nav>
+		<li><a href="/">Home</a></li>
+		<li><a href="/employeeList">List of Bank</a></li>
+		<li><a href="/contact">Contact Us</a></li>
+		<li><a href="/employeeBenefits">Product/Services</a></li>
+		<li><a href="/careers">Security</a></li>
+	</div>
+	<div>
+		<span style="font-size: 30px">The current visitor count is </span> <span
+			style="font-size: 30px; color: blue" th:text="${pageCount}">noValue</span><br>
+	</div>
+	<div>
+		<p>
+		<h2>
+			<q>Transform your everyday.</q>
+		</h2>
+		<h4>A career at our company is more than just a job — it’s an
+			opportunity to shape the future. Our company was built on a set of
+			four core values which make that possible: trust, customer success,
+			innovation, and equality. Here, we harness technologies that
+			revolutionize careers, companies, and the world. Join us to discover
+			a future of opportunities.</h4>
+		<br>
+		<h2>
+			<q>Our commitment to work-life integration allows me to
+				prioritize my health and wake up feeling refreshed daily.</q>
+		</h2>
+	</div>
+</body>
+</html>

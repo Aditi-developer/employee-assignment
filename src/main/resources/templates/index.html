@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>MVC Project</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<!-- CSS links -->
+<link rel="stylesheet" href="/resources/css/index.css">
+
+</head>
+
+<body>
+	<div id=nav>
+		<li><a href="/">Home</a></li>
+		<li><a href="/employeeList">List of Bank</a></li>
+		<li><a href="/contact">Contact Us</a></li>
+		<li><a href="/employeeBenefits">Product/Services</a></li>
+		<li><a href="/careers">Security</a></li>
+	</div>
+	<form action="#" th:action="@{/form_validation}"
+		th:object="${formValidation}" method="post">
+		<span style="font-size: 30px">The current visitor count is </span> <span
+			style="font-size: 30px; color: blue" th:text="${pageCount}">noValue</span>
+		<div class="input-container">
+			<i class="fa fa-user icon"></i> <input class="input-field"
+				type="text" id="employee_id" th:field="*{employeeID}"
+				placeholder="Enter Employee Id">
+			<p th:if="${#fields.hasErrors('employeeID')}"
+				th:errors="*{employeeID}">Failed</p>
+		</div>
+
+		<div class="input-container">
+			<i class="fa fa-envelope icon"></i> <input class="input-field"
+				type="text" id="employee_name" th:field="*{employeeName}"
+				placeholder="Enter Employee Name">
+			<p th:if="${#fields.hasErrors('employeeName')}"
+				th:errors="*{employeeName}">Failed</p>
+		</div>
+
+		<div class="input-container">
+			<i class="fa fa-key icon"></i> <input class="input-field" type="text"
+				id="mobile_number" th:field="*{mobileNumber}"
+				placeholder="Enter Mobile Number">
+			<p th:if="${#fields.hasErrors('mobileNumber')}"
+				th:errors="*{mobileNumber}">Failed</p>
+		</div>
+
+		<button type="submit" class="btn">Submit</button>
+	</form>
+</body>
+</html>
